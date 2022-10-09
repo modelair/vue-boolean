@@ -16,10 +16,7 @@ npm i vue-boolean
 
 ## Usage
 
-```ts
-import VueBoolean from 'vue-boolean'
-Vue.component('masked-input', MaskedInput);
-```
+
 
 ### Composition API
 
@@ -33,7 +30,9 @@ const booleanModel = ref(false)
 </script>
 
 <template>
-  <vue-boolean v-model="booleanModel"></vue-boolean>
+  <vue-boolean v-model="booleanModel">
+    <button>Press to true</button>
+  </vue-boolean>
 </template>
 ```
 ### Options API
@@ -55,8 +54,21 @@ export default {
 </script>
 
 <template>
-  <vue-boolean v-model="booleanModel"></vue-boolean>
+  <vue-boolean v-model="booleanModel">
+    <button>Press to true</button>
+  </vue-boolean>
 </template>
+```
+
+With Nuxt 3
+```ts
+import { defineNuxtPlugin } from 'nuxt/app'
+import VueBoolean from 'vue-boolean'
+export default defineNuxtPlugin((nuxtApp) => {
+    nuxtApp.vueApp.use(VueBoolean)
+
+})
+
 ```
 >when modelValue set to true, slot class will be set to "checked"
 with model
