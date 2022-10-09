@@ -1,8 +1,8 @@
 <template>
   <component :is="$slots.default()[0]"
              :class="{'checked': propChecked }"
-             @[event]="action"
              :checked="propChecked ? '' : undefined"
+             @[event]="action"
   ></component>
 </template>
 

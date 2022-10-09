@@ -69,44 +69,45 @@ export default defineNuxtPlugin((nuxtApp) => {
 
 })
 
+
 ```
->when modelValue set to true, slot class will be set to "checked"
+### Behaivor
+>when state set to true, slot class will be set to "checked"
 with model
 
 props:
 ```
-
 @change - fires on state change
-:checked
-v-model
-event - "click" by default
+:checked - default state
+v-model - modelled state
+event - custom event to change state. "click" by default
 
 ```
-### With model
+### With v-model
 ```vue 
-<VueBoolean v-model="booleanModel">
+<vue-boolean v-model="booleanModel">
     <button>With model</button> 
-</VueBoolean>
+</vue-boolean>
 ```
 when clicked it renders to: 
 ```html
 <button class="checked">With model</button> 
 ```
-### without model
+### Without v-model
 ```vue 
-<VueBoolean>
+<vue-boolean>
     <button>without model</button> 
-</VueBoolean>
+</vue-boolean>
 ```
-### with true by default
+### With true by default
 ```vue 
-<VueBoolean :checked="true">
+<vue-boolean :checked="true">
     <button>with default</button> 
-</VueBoolean>
+</vue-boolean>
 ```
-### with event 
+### With custom event 
 ```vue 
-<VueBoolean :event="mouseover" v-model="booleanModel">
+<vue-boolean :event="mouseover" v-model="booleanModel">
     <button>with event </button> 
-</VueBoolean>
+</vue-boolean>
 ```
