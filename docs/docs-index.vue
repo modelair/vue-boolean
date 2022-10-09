@@ -31,6 +31,7 @@
 </template>
 
 <script setup lang="ts">
+import { VueBoolean } from '../src'
 import { ref } from 'vue'
 const booleanModel = ref(false)
 </script>

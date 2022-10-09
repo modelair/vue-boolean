@@ -14,11 +14,49 @@ npm i vue-boolean
 
 ```
 
-## How it works
+## Usage
 
 ```ts
 import VueBoolean from 'vue-boolean'
+Vue.component('masked-input', MaskedInput);
+```
 
+### Composition API
+
+```vue
+
+<script setup>
+import { VueBoolean } from 'vue-boolean'
+import { ref } from 'vue'
+
+const booleanModel = ref(false)
+</script>
+
+<template>
+  <vue-boolean v-model="booleanModel"></vue-boolean>
+</template>
+```
+### Options API
+```vue
+
+<script>
+import { VueBoolean } from 'vue-boolean'
+
+export default {
+  components: {
+    VueBoolean
+  },
+  data() {
+    return {
+      booleanModel: false
+    }
+  }
+}
+</script>
+
+<template>
+  <vue-boolean v-model="booleanModel"></vue-boolean>
+</template>
 ```
 >when modelValue set to true, slot class will be set to "checked"
 with model
