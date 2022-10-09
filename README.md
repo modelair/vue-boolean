@@ -81,7 +81,7 @@ props:
 :checked - default state
 v-model - modelled state
 event - custom event to change state. "click" by default
-
+className - custom class to add. default - checked
 ```
 ### With v-model
 ```vue 
@@ -110,4 +110,15 @@ when clicked it renders to:
 <vue-boolean :event="mouseover" v-model="booleanModel">
     <button>with event </button> 
 </vue-boolean>
+```
+### With custom class 
+
+```vue 
+<vue-boolean class-name="state-checked" v-model="booleanModel">
+    <button>with event </button> 
+</vue-boolean>
+```
+renders to
+```html
+<button class="state-checked">with event </button> 
 ```

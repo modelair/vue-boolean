@@ -1,8 +1,8 @@
 <template>
   <component :is="$slots.default()[0]"
-             :class="{'checked': propChecked }"
-             :checked="propChecked ? '' : undefined"
+             :class="{[className]: propChecked }"
              @[event]="action"
+             :checked="propChecked ? '' : undefined"
   ></component>
 </template>
 
@@ -10,11 +10,12 @@
 import { Ref, ref, watch } from 'vue'
 import { useVModel } from '../composable/vmodel'
 
+
 const props = defineProps({
   modelValue: {type: Boolean, default: undefined},
   checked: {type: Boolean, default: undefined},
-  event: {type: String, default: 'click'}
-
+  event: {type: String, default: 'click'},
+  className: {type: String, default: 'checked'}
 })
 const emit = defineEmits(['update:modelValue', 'change'])
 watch(() => props.checked, () => {
