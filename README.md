@@ -13,7 +13,8 @@ Only for Vue 3
 npm i vue-boolean
 
 ```
-
+## Demo
+[Demo at codesandbox.io](https://codesandbox.io/s/vueboolean-demo-yj03wy?file=/src/App.vue)
 ## Usage
 
 
@@ -61,7 +62,11 @@ export default {
 ```
 
 With Nuxt 3
+
+
 ```ts
+// plugins/vue-boolean.ts
+
 import { defineNuxtPlugin } from 'nuxt/app'
 import VueBoolean from 'vue-boolean'
 export default defineNuxtPlugin((nuxtApp) => {
