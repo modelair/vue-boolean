@@ -1,7 +1,7 @@
 
 # Vue-Boolean
 
-Vue-Boolean is a wrapper for ```<slot/>```
+Vue-Boolean it is a wrapper for child component
 
 Only for Vue 3 
 
