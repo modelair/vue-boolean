@@ -9,9 +9,7 @@ Only for Vue 3
 
 
 ```bash
-# install dependencies
 npm i vue-boolean
-
 ```
 ## Demo
 [Demo at codesandbox.io](https://codesandbox.io/s/vueboolean-demo-yj03wy?file=/src/App.vue)
@@ -83,7 +81,7 @@ with model
 props:
 ```
 @change - fires on state change
-:checked - default state
+:checked - set default state. default - false
 v-model - modelled state
 event - custom event to change state. "click" by default
 className - custom class to add. default - checked
@@ -112,18 +110,18 @@ when clicked it renders to:
 ```
 ### With custom event 
 ```vue 
-<vue-boolean :event="mouseover" v-model="booleanModel">
-    <button>with event </button> 
+<vue-boolean :event="mouseover">
+    <button>with event</button> 
 </vue-boolean>
 ```
 ### With custom class 
 
 ```vue 
 <vue-boolean class-name="state-checked" v-model="booleanModel">
-    <button>with event </button> 
+    <button>With custom class</button> 
 </vue-boolean>
 ```
 renders to
 ```html
-<button class="state-checked">with event </button> 
+<button class="state-checked">With custom class</button> 
 ```
