@@ -1,5 +1,10 @@
 
 # Vue-Boolean
+ <p>
+  <a href="https://www.npmjs.com/package/vue-boolean"><img src="https://badgen.net/npm/dm/vue-boolean" alt="Downloads"></a>
+  <a href="https://www.npmjs.com/package/vue-boolean"><img src="https://badgen.net/npm/v/vue-boolean" alt="Version"></a>
+  <a href="https://www.npmjs.com/package/vue-boolean"><img src="https://badgen.net/npm/license/vue-boolean" alt="License"></a>
+</p>
 
 Vue-Boolean it is a renderer for child component
 
