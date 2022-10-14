@@ -1,7 +1,7 @@
 
 # Vue-Boolean
 
-Vue-Boolean it is a wrapper for child component
+Vue-Boolean it is a renderer for child component
 
 Only for Vue 3  
 
